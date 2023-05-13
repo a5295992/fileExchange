@@ -1,0 +1,18 @@
+spring:
+  mvc:
+    static-path-pattern: /resources/**
+  web:
+    resources:
+      static-locations: /static/
+  datasource:
+    url: jdbc:sqlite:db/user.db
+    driver-class-name: org.sqlite.JDBC
+    username:
+    password:
+
+mybatis:
+  mapper-locations: classpath*:/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true   #开启驼峰命名
+server:
+  port: 14400

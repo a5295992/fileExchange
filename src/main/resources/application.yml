@@ -1,0 +1,25 @@
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 1024MB # 单文件最大限制
+      max-request-size: 1024MB # 一次上传所有文件的最大限制. 如果接口只支持单文件,则该值与上面相同即可
+  mvc:
+    static-path-pattern: resources/**
+  web:
+    resources:
+      static-locations: /static/
+  datasource:
+    url: jdbc:sqlite:db/user.db
+    driver-class-name: org.sqlite.JDBC
+    username:
+    password:
+
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true   #开启驼峰命名
+server:
+  port: 14400
+
+
